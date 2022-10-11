@@ -114,8 +114,10 @@ input {
 
 .autocomplete {
     /*the container must be positioned relative:*/
-    position: relative;
-    display: inline-block;
+  
+text-align: center;    
+padding: 20px;
+
     /* margin: 0px 15px; */
     /* text-align: center; */
 }
