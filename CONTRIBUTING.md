@@ -8,7 +8,7 @@ Thank you for considering contributing to this project! This document will outli
 
 ## Issues before PRs
 
-1. Before you start working on a change please make sure that there is an issue for what you will be working on. You can either find and [existing issue](https://github.com/LunarMarathon/graphTo2d/issues) or [open a new issue](https://github.com/LunarMarathon/graphTo2d/issues/new) if none exists. Doing this makes sure that others can contribute with thoughts or suggest alternatives, ultimately making sure that we only add changes that make
+1. Before you start working on a change please make sure that there is an issue for what you will be working on. You can either find and [existing issue](https://github.com/LunarMarathon/graphToTable/issues) or [open a new issue](https://github.com/LunarMarathon/graphToTable/issues/new) if none exists. Doing this makes sure that others can contribute with thoughts or suggest alternatives, ultimately making sure that we only add changes that make
 
 2. When you are ready to start working on a change you should first [fork this repo](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) and [create a new branch](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-and-deleting-branches-within-your-repository).
 3. Make your changes.
