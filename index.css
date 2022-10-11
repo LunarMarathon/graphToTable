@@ -108,6 +108,10 @@ input {
     cursor: pointer;
 }
 
+.btn:hover {
+    transform: scale(1.2);
+}
+
 .autocomplete {
     /*the container must be positioned relative:*/
     position: relative;
