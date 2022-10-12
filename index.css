@@ -116,8 +116,6 @@ input {
     /*the container must be positioned relative:*/
     position: relative;
     display: inline-block;
-
-    
     /* margin: 0px 15px; */
     /* text-align: center; */
 }
@@ -166,7 +164,6 @@ input {
   padding: 1rem 1rem;
   text-align: center;
 }
-
 
 input[type='checkbox']{
     cursor: pointer;
