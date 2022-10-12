@@ -138,6 +138,7 @@ input {
     cursor: pointer;
     background-color: var(--autoCompBgColor);
     border-bottom: 1px var(--autoCompBorderC);
+    margin: 0px 273px 0px 9px;
 }
 
 .autocomplete-items div:hover {
