@@ -234,6 +234,15 @@ function downloadFunc() {
     htmlToCSV(html, "graphTo2D.csv");
 }
 
+const toTop = document.querySelector(".goTo-top-btn");
+
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset > 100) {
+    toTop.classList.add("active");
+  } else {
+    toTop.classList.remove("active");
+  }
+})
 //🔳adding multiple links separated by commas
 //🔳checkbox/diff format and saving it if review is done
 //🔳file or db or browser's local storage
