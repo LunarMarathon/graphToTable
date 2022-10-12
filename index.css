@@ -21,8 +21,11 @@
     --autoCompFontColor: white;
     --checkedBgColor:#ffc400;
 }
-
-body {
+html 
+{
+    scroll-behavior: smooth;
+}
+  body {
     margin: 0;
     /* background-color: #b2ff59; */
     background-color: var(--mainBgColor);
@@ -167,7 +170,35 @@ input:checked+label {
     background-color: var(--checkedBgColor);
 }
 
-/* input {
+.goTo-top-btn {
+    background: var(--autoCompBgColorA);
+    position: fixed;
+    bottom: 16px;
+    right:48px;
+    width:50px;
+    height:50px;
+    border-radius: 20%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center; 
+    font-size:32px;
+    color:var(--mainBgColor);
+    text-decoration: none;
+    opacity:0;
+    pointer-events: none;
+    transition: all .4s;
+  }
+  .fas
+  {
+    margin-top: 4px;
+  }
+  .goTo-top-btn.active {
+    bottom:55px;
+    pointer-events: auto;
+    opacity:1;
+  }
+  /* input {
     border: 1px solid transparent;
     background-color: #f1f1f1;
     padding: 10px;
