@@ -159,6 +159,12 @@ input {
     align-items: center; */
 }
 
+.outerInputDiv{
+  margin: 1rem;
+  padding: 1rem 1rem;
+  text-align: center;
+}
+
 input[type='checkbox']{
     cursor: pointer;
 }
