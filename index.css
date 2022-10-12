@@ -42,14 +42,20 @@ h1 {
 #container {
     /* white-space: pre-wrap; */
     margin: 30px;
-    border: 2px solid var(--contBorderColor);
+    /* border: 2px solid var(--contBorderColor); */
     background-color: var(--contBgColor);
     text-align: center;
     /* display: flow-root; */
-    padding: 10px;
+    /* padding: 10px; */
     border-radius: 7px;
     white-space: nowrap;
+    /* overflow-x: scroll; */
+}
+
+.dynCont{
+    padding: 10px;
     overflow-x: scroll;
+    border: 2px solid var(--contBorderColor);
 }
 
 table,

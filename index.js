@@ -17,6 +17,8 @@ var link
 function clearTable() {
     let divContainer = document.getElementById("container");
     divContainer.innerHTML = ""
+    //Remove styling to container
+    divContainer.classList.remove("dynCont");
 }
 
 function clearText() {
@@ -166,13 +168,16 @@ function createTable() {
         for (let cell of row) {//While iterating over the index(cell)
             //insert a cell into the table element
             let newCell = table.rows[table.rows.length - 1].insertCell();//add text to the created cell element
-            newCell.innerHTML = `<a href="#" class="linkrow">${cell}</a>`;
+            newCell.innerHTML = `<input type="checkbox"><label><a href="#" class="linkrow">${cell}</a></label>`;
         }
     }
     //append the compiled table to the DOM
     let divContainer = document.getElementById("container");
     divContainer.appendChild(table);
     // document.body.appendChild(table);
+
+    //Add styling to container
+    divContainer.classList.add("dynCont");
 
     // Code to scroll down to particular row
     link = $('.linkrow');
@@ -218,6 +223,8 @@ function searchTable() {
             let divContainer = document.getElementById("container");
             // alert(table)
             divContainer.appendChild(table2);
+            //Add styling to container
+            divContainer.classList.add("dynCont");
         }
     }
     else {
@@ -226,6 +233,8 @@ function searchTable() {
         let divContainer = document.getElementById("container");
         // alert(table)
         divContainer.appendChild(noRow);
+        //Add styling to container
+        divContainer.classList.add("dynCont");
     }
     //append the compiled table to the DOM
     // document.body.appendChild(table);
