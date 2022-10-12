@@ -116,6 +116,8 @@ input {
     /*the container must be positioned relative:*/
     position: relative;
     display: inline-block;
+
+    
     /* margin: 0px 15px; */
     /* text-align: center; */
 }
@@ -152,12 +154,19 @@ input {
 }
 
 .inputCont {
+    margin: 10px;
+    /* border: 1px solid blue;
     display: flex;
     justify-content: center;
-    align-items: center; 
-    padding: 10px;
-    margin: 5px;
+    align-items: center; */
 }
+
+.outerInputDiv{
+  margin: 1rem;
+  padding: 1rem 1rem;
+  text-align: center;
+}
+
 
 input[type='checkbox']{
     cursor: pointer;
