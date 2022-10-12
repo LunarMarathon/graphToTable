@@ -152,11 +152,11 @@ input {
 }
 
 .inputCont {
-    margin: 10px;
-    /* border: 1px solid blue;
     display: flex;
     justify-content: center;
-    align-items: center; */
+    align-items: center; 
+    padding: 10px;
+    margin: 5px;
 }
 
 input[type='checkbox']{
