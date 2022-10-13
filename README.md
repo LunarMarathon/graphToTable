@@ -1,3 +1,5 @@
+### (IMP NOTE FOR CONTRIBUTORS: PLEASE DON'T FORMAT THE CODE, IT'S DIFFICULT FOR ME TO FIND THE CHANGES. THANK YOU!)
+
 <h1 align="center"> Graph to Table </h1>
 
 <div align="center">
