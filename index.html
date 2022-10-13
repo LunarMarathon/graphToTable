@@ -10,7 +10,28 @@
 </head>
 
 <body>
+    <script>
+        window.addEventListener("storage", function () {
+            if (localStorage.lightMode == "dark") {
+                app.setAttribute("light-mode", "dark");
+            } else {
+                app.setAttribute("light-mode", "light");
+            }
+        }, false);
+        var app = document.getElementsByTagName("BODY")[0];
+        if (localStorage.lightMode == "dark") {
+            app.setAttribute("light-mode", "dark");
+        }
+    </script>
     <h1>Graph to Table</h1>
+    <div class="container">
+
+        <button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+
     <div class="outerInputDiv">
         <div class="inputCont autocomplete">
             <input id="input1" type="text" placeholder="key/node1">
@@ -26,13 +47,25 @@
         <button type="submit" class="readBtn btn" onclick="searchTable()">Search table!</button>
         <button id="downloadBtn" class="readBtn btn" onclick="downloadFunc()">Download CSV!</button>
     </div>
-    
+
     <div id="container"></div>
     <a href="#" class="goTo-top-btn">
         <i class="fas fa-chevron-up"></i>
-      </a>
-    
+    </a>
+
     <script src="index.js"></script>
+    <script>
+        function toggle_light_mode() {
+            var app = document.getElementsByTagName("BODY")[0];
+            if (localStorage.lightMode == "dark") {
+                localStorage.lightMode = "light";
+                app.setAttribute("light-mode", "light");
+            } else {
+                localStorage.lightMode = "dark";
+                app.setAttribute("light-mode", "dark");
+            }
+        }
+    </script>
 </body>
 
 </html>
