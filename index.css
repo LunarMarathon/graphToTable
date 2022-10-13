@@ -160,6 +160,12 @@ input {
     color: var(--autoCompFontColor);
 }
 
+.cell{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .inputCont {
     margin: 10px;
     /* border: 1px solid blue;
@@ -176,6 +182,7 @@ input {
 
 input[type='checkbox']{
     cursor: pointer;
+    margin: 0px 10px 0px 0px;
 }
 
 input:checked+label {
