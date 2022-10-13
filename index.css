@@ -182,6 +182,7 @@ input {
 
 input[type='checkbox']{
     cursor: pointer;
+    margin: 0px 10px 0px 0px;
 }
 
 input:checked+label {
