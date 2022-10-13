@@ -14,20 +14,25 @@ let tableArr = [
 
 var link
 
+//Clearing screen/container code
 function clearTable() {
     let divContainer = document.getElementById("container");
     divContainer.innerHTML = ""
     //Remove styling to container
     divContainer.classList.remove("dynCont");
 }
+//----------------------------------------------------------------
 
+//Clear input text code
 function clearText() {
     const input1 = document.getElementById("input1");
     const input2 = document.getElementById("input2");
     input1.value = ""
     input2.value = ""
 }
+//----------------------------------------------------------------
 
+//Autocomplete code
 function autocomplete(inp, arr) {
     /*the autocomplete function takes two arguments,
     the text field element and an array of possible autocompleted values:*/
@@ -127,7 +132,9 @@ function autocomplete(inp, arr) {
         closeAllLists(e.target);
     });
 }
+//----------------------------------------------------------------
 
+//Code for creating the table
 function createTable() {
     autocomplete(document.getElementById("input1"), tableArr);
     autocomplete(document.getElementById("input2"), tableArr);
@@ -179,7 +186,7 @@ function createTable() {
     //Add styling to container
     divContainer.classList.add("dynCont");
 
-    // Code to scroll down to particular row
+    // Code to scroll down to particular row>>>>>>>>>>>>>>>>>>>>>>>
     link = $('.linkrow');
     // console.log(link)
     link.click(function (e) {
@@ -200,7 +207,9 @@ function createTable() {
         }
     });
 }
+//----------------------------------------------------------------
 
+//Search table code
 function searchTable() {
     autocomplete(document.getElementById("input1"), tableArr);
     let key = document.getElementById("input1").value;
@@ -240,9 +249,11 @@ function searchTable() {
     // document.body.appendChild(table);
 
 }
+//----------------------------------------------------------------
 
+//Download CSV code
 function htmlToCSV(html, filename) {
-    alert("Inside htmlToCSV")
+//     alert("Inside htmlToCSV")
     var data = [];
     var rows = document.querySelectorAll("table tr");
 
@@ -255,7 +266,6 @@ function htmlToCSV(html, filename) {
 
         data.push(row.join(","));
     }
-
     downloadCSVFile(data.join("\n"), filename);
 }
 
@@ -271,11 +281,13 @@ function downloadCSVFile(csv, filename) {
 }
 
 function downloadFunc() {
-    alert("Inside event listener")
+    //alert("Inside event listener")
     var html = document.querySelector("table").outerHTML;
-    htmlToCSV(html, "graphTo2D.csv");
+    htmlToCSV(html, "graphToTable.csv");
 }
+//----------------------------------------------------------------
 
+//Top button code
 const toTop = document.querySelector(".goTo-top-btn");
 
 window.addEventListener("scroll", () => {
@@ -285,6 +297,8 @@ window.addEventListener("scroll", () => {
     toTop.classList.remove("active");
   }
 })
+//----------------------------------------------------------------
+
 //🔳adding multiple links separated by commas
 //🔳checkbox/diff format and saving it if review is done
 //🔳file or db or browser's local storage
