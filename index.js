@@ -175,7 +175,7 @@ function createTable() {
         for (let cell of row) {//While iterating over the index(cell)
             //insert a cell into the table element
             let newCell = table.rows[table.rows.length - 1].insertCell();//add text to the created cell element
-            newCell.innerHTML = `<input type="checkbox"><label><a href="#" class="linkrow">${cell}</a></label>`;
+            newCell.innerHTML = `<div class="cell"><input class="cell-checkbox" type="checkbox"><label><a href="#" class="linkrow">${cell}</a></label></div>`;
         }
     }
     //append the compiled table to the DOM
@@ -228,7 +228,7 @@ function searchTable() {
             // alert(exists)
             let newCell = table2.rows[table2.rows.length - 1].insertCell();//add text to the created cell element
             // alert(newCell)
-            newCell.innerHTML = `<input type="checkbox">${cell}</input>`;
+            newCell.innerHTML = `<div class="cell"><input type="checkbox">${cell}</input><div>`;
             let divContainer = document.getElementById("container");
             // alert(table)
             divContainer.appendChild(table2);

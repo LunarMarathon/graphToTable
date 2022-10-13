@@ -160,6 +160,12 @@ input {
     color: var(--autoCompFontColor);
 }
 
+.cell{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .inputCont {
     margin: 10px;
     /* border: 1px solid blue;
