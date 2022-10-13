@@ -112,6 +112,13 @@ input {
     transform: scale(1.2);
 }
 
+.cell{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+
 .autocomplete {
     /*the container must be positioned relative:*/
     position: relative;

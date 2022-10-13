@@ -154,7 +154,7 @@ function createTable() {
         for (let cell of row) {//While iterating over the index(cell)
             //insert a cell into the table element
             let newCell = table.rows[table.rows.length - 1].insertCell();//add text to the created cell element
-            newCell.innerHTML = `<input type="checkbox"><label>${cell}</label>`;
+            newCell.innerHTML = `<div class="cell"><input type="checkbox"><label>${cell}</label></div>`;
         }
     }
     //append the compiled table to the DOM
