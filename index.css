@@ -10,7 +10,7 @@
     --contBgColor: teal;
     --tableBorderColor: #6e6659;
     --tableBgColor: wheat;
-    --tableFontColor: teal;
+    --tableFontColor: rgb(133, 47, 198);
     --inputBgColor: #f1f1f1;
     --inputFontColor: #000000;
     --btnFontColor: #202121;
@@ -102,6 +102,11 @@ input {
     /* background-color: #C7BE92; */
     /* border: 1px solid transparent; */
 }
+
+.linkrow {
+    color: var(--tableFontColor);
+}
+
 
 .btn {
     margin: 5px 15px;
@@ -323,6 +328,7 @@ body[light-mode=dark] {
     --autoCompBgColorA: rgb(253, 255, 255);
     --autoCompFontColor: rgb(254, 252, 252);
     --checkedBgColor: #1c0d1c;
+    --tableFontColor: rgb(64, 245, 245);
 }
 
 body[light-mode="dark"] .light-mode-button span:nth-child(1) {
