@@ -53,6 +53,8 @@ h1 {
     border-radius: 7px;
     white-space: nowrap;
     /* overflow-x: scroll; */
+    display: flex;
+    justify-content: center;
 }
 
 .dynCont{
