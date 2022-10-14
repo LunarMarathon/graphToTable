@@ -18,7 +18,7 @@ You must have seen graphs or networks(or even mindmaps), connecting words or sen
 ![image](https://user-images.githubusercontent.com/113847439/195905936-de865ff2-e247-4222-8ccd-48fc44e25ff3.png)
 	
 ## Website
-[📌Visit the site](https://lunarmarathon.github.io/graphToTable/)
+[📌Visit the site](https://graphtotable.netlify.app/)
 
 
 ## Contributing
