@@ -1,16 +1,32 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Graph to Table</title>
+
     <link rel="icon" type="image/x-icon" href="table_icon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
     <link rel="stylesheet" href="index.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/afd4daee31.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
-    <h1>GRAPH TO TABLE</h1>
+
+    <div class="nav">
+        <div></div>
+        <h1>GRAPH TO TABLE</h1>
+        <div class="container">
+
+            <button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+
     <div class="outerInputDiv">
         <div class="inputCont autocomplete">
             <input id="input1" type="text" placeholder="key/node1">
@@ -26,13 +42,15 @@
         <button type="submit" class="readBtn btn" onclick="searchTable()">Search table!</button>
         <button id="downloadBtn" class="readBtn btn" onclick="downloadFunc()">Download CSV!</button>
     </div>
-    
+
     <div id="container"></div>
     <a href="#" class="goTo-top-btn">
         <i class="fas fa-chevron-up"></i>
-      </a>
-    
-    <script src="index.js"></script>
-</body>
+    </a>
 
+    <script src="index.js"></script>
+    <!-- <script>
+        
+    </script> -->
+</body>
 </html>

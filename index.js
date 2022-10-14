@@ -1,3 +1,29 @@
+// dark
+
+window.addEventListener("storage", function () {
+    if (localStorage.lightMode == "dark") {
+        app.setAttribute("light-mode", "dark");
+    } else {
+        app.setAttribute("light-mode", "light");
+    }
+}, false);
+var app = document.getElementsByTagName("BODY")[0];
+if (localStorage.lightMode == "dark") {
+    app.setAttribute("light-mode", "dark");
+}
+
+
+function toggle_light_mode() {
+    var app = document.getElementsByTagName("BODY")[0];
+    if (localStorage.lightMode == "dark") {
+        localStorage.lightMode = "light";
+        app.setAttribute("light-mode", "light");
+    } else {
+        localStorage.lightMode = "dark";
+        app.setAttribute("light-mode", "dark");
+    }
+}
+// ********
 
 let tableArr = [
     ["Fruits", "Mango", "Apple", "Banana"],
@@ -291,11 +317,11 @@ function downloadFunc() {
 const toTop = document.querySelector(".goTo-top-btn");
 
 window.addEventListener("scroll", () => {
-  if (window.pageYOffset > 100) {
-    toTop.classList.add("active");
-  } else {
-    toTop.classList.remove("active");
-  }
+    if (window.pageYOffset > 100) {
+        toTop.classList.add("active");
+    } else {
+        toTop.classList.remove("active");
+    }
 })
 //----------------------------------------------------------------
 
