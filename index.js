@@ -1,3 +1,5 @@
+// dark
+
 window.addEventListener("storage", function () {
     if (localStorage.lightMode == "dark") {
         app.setAttribute("light-mode", "dark");
@@ -21,7 +23,7 @@ function toggle_light_mode() {
         app.setAttribute("light-mode", "dark");
     }
 }
-
+// ********
 
 let tableArr = [
     ["Fruits", "Mango", "Apple", "Banana"],

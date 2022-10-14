@@ -12,6 +12,7 @@
     --tableBgColor: wheat;
     --tableFontColor: teal;
     --inputBgColor: #f1f1f1;
+    --inputFontColor: #000000;
     --btnFontColor: #202121;
     --btnBgColor: #C7BE92;
     --autoCompBgColor: #fff;
@@ -96,6 +97,7 @@ input {
     border-radius: 3px;
     padding: 7px;
     background-color: var(--inputBgColor);
+    color: var(--inputFontColor);
     font-size: 16px;
     /* background-color: #C7BE92; */
     /* border: 1px solid transparent; */
@@ -311,7 +313,8 @@ body[light-mode=dark] {
     --tableBorderColor: #040403;
     --tableBgColor: rgb(28, 21, 32);
     --tableFontColor: rgb(221, 230, 230);
-    --inputBgColor: #010101;
+    --inputBgColor: #000000;
+    --inputFontColor: #fef7f7;
     --btnFontColor: #8f9393;
     --btnBgColor: #010607;
     --autoCompBgColor: rgb(0, 0, 0);
@@ -328,7 +331,7 @@ body[light-mode="dark"] .light-mode-button span:nth-child(1) {
 }
 
 body[light-mode=dark] .light-mode-button span:nth-child(2) {
-    left: 65px;
+    left: 30px;
     background-color: #141516;
 }
 
@@ -340,7 +343,7 @@ body[light-mode=dark] .light-mode-button span:nth-child(2) {
     box-sizing: border-box;
     cursor: pointer;
     height: 40px;
-    width: 100px;
+    width: 10px;
     position: relative;
     border: 1px solid rgba(255, 255, 255, 0);
 }
@@ -354,8 +357,8 @@ body[light-mode=dark] .light-mode-button span:nth-child(2) {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100px;
-    height: 40px;
+    width: 50px;
+    height: 20px;
     border-radius: 20px;
     background-color: #d6d7db;
     box-shadow: inset 1px 1px 3px 0 rgb(0 0 0 / 40%);
@@ -364,10 +367,10 @@ body[light-mode=dark] .light-mode-button span:nth-child(2) {
 
 .light-mode-button span:nth-child(2) {
     position: absolute;
-    top: 5px;
+    top: 2px;
     left: 5px;
-    width: 30px;
-    height: 30px;
+    width: 17px;
+    height: 17px;
     background-color: #fff;
     border-radius: 50%;
     box-shadow: 1px 1px 2px 0 rgb(0 0 0 / 40%);
