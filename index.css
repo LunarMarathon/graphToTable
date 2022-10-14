@@ -286,6 +286,12 @@ input:checked+label {
     padding: 7px;
 } */
 
+.nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
 
 body {
     background-color: var(--mainBgColor);
@@ -294,8 +300,26 @@ body {
 }
 
 body[light-mode=dark] {
-    background-color: #0d0812;
-    color: #ced4e2;
+    background-color: #10121a;
+    color: #b1bcd7b0;
+    --mainBgColor: #061619;
+    --mainHeadingFontColor: #fffefb;
+    --textShadowColor: #990d0d;
+    --bodyFontColor: #202121;
+    --contBorderColor: #131d1d;
+    --contBgColor: rgb(4, 8, 8);
+    --tableBorderColor: #040403;
+    --tableBgColor: rgb(28, 21, 32);
+    --tableFontColor: rgb(221, 230, 230);
+    --inputBgColor: #010101;
+    --btnFontColor: #8f9393;
+    --btnBgColor: #010607;
+    --autoCompBgColor: rgb(0, 0, 0);
+    --autoCompBorderC: #fffbfb;
+    --autoCompBgColorH: #e9e9e9;
+    --autoCompBgColorA: rgb(253, 255, 255);
+    --autoCompFontColor: rgb(254, 252, 252);
+    --checkedBgColor: #1c0d1c;
 }
 
 body[light-mode="dark"] .light-mode-button span:nth-child(1) {
