@@ -5,13 +5,14 @@
     --mainBgColor: #ffc400;
     --mainHeadingFontColor: #C7BE92;
     --textShadowColor: #6e6659;
-    --bodyFontColor:#202121;
-    --contBorderColor:#202121;
-    --contBgColor:teal;
-    --tableBorderColor:#6e6659;
-    --tableBgColor:wheat;
-    --tableFontColor:teal;
-    --inputBgColor:#f1f1f1;
+    --bodyFontColor: #202121;
+    --contBorderColor: #202121;
+    --contBgColor: teal;
+    --tableBorderColor: #6e6659;
+    --tableBgColor: wheat;
+    --tableFontColor: rgb(133, 47, 198);
+    --inputBgColor: #f1f1f1;
+    --inputFontColor: #000000;
     --btnFontColor: #202121;
     --btnBgColor: #C7BE92;
     --autoCompBgColor: #fff;
@@ -19,13 +20,14 @@
     --autoCompBgColorH: #e9e9e9;
     --autoCompBgColorA: teal;
     --autoCompFontColor: white;
-    --checkedBgColor:#ffc400;
+    --checkedBgColor: #ffc400;
 }
-html 
-{
+
+html {
     scroll-behavior: smooth;
 }
-  body {
+
+body {
     margin: 0;
     /* background-color: #b2ff59; */
     background-color: var(--mainBgColor);
@@ -55,7 +57,7 @@ h1 {
     /* overflow-x: scroll; */
 }
 
-.dynCont{
+.dynCont {
     padding: 10px;
     overflow-x: scroll;
     border: 2px solid var(--contBorderColor);
@@ -91,14 +93,20 @@ td {
 input {
     margin: 10px 15px 0px 15px;
     /* border: 5px solid royalblue; */
-    border:none;
+    border: none;
     border-radius: 3px;
     padding: 7px;
     background-color: var(--inputBgColor);
+    color: var(--inputFontColor);
     font-size: 16px;
     /* background-color: #C7BE92; */
     /* border: 1px solid transparent; */
 }
+
+.linkrow {
+    color: var(--tableFontColor);
+}
+
 
 .btn {
     margin: 5px 15px;
@@ -174,13 +182,13 @@ input {
     align-items: center; */
 }
 
-.outerInputDiv{
-  margin: 1rem;
-  padding: 1rem 1rem;
-  text-align: center;
+.outerInputDiv {
+    margin: 1rem;
+    padding: 1rem 1rem;
+    text-align: center;
 }
 
-input[type='checkbox']{
+input[type='checkbox'] {
     cursor: pointer;
     margin: 0px 10px 0px 0px;
 }
@@ -193,31 +201,33 @@ input:checked+label {
     background: var(--autoCompBgColorA);
     position: fixed;
     bottom: 16px;
-    right:48px;
-    width:50px;
-    height:50px;
+    right: 48px;
+    width: 50px;
+    height: 50px;
     border-radius: 20%;
     display: flex;
     align-items: center;
     align-content: center;
-    justify-content: center; 
-    font-size:32px;
-    color:var(--mainBgColor);
+    justify-content: center;
+    font-size: 32px;
+    color: var(--mainBgColor);
     text-decoration: none;
-    opacity:0;
+    opacity: 0;
     pointer-events: none;
     transition: all .4s;
-  }
-  .fas
-  {
+}
+
+.fas {
     margin-top: 4px;
-  }
-  .goTo-top-btn.active {
-    bottom:55px;
+}
+
+.goTo-top-btn.active {
+    bottom: 55px;
     pointer-events: auto;
-    opacity:1;
-  }
-  /* input {
+    opacity: 1;
+}
+
+/* input {
     border: 1px solid transparent;
     background-color: #f1f1f1;
     padding: 10px;
@@ -232,7 +242,7 @@ input:checked+label {
 /* input[type=submit] {
     background-color: DodgerBlue;
     color: #fff;
-} */ 
+} */
 
 /* .clearBtn,{
     background-color: #C7BE92;
@@ -289,3 +299,96 @@ input:checked+label {
     border-radius: 3px;
     padding: 7px;
 } */
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+body {
+    background-color: var(--mainBgColor);
+    ;
+    transition: background-color .3s;
+}
+
+body[light-mode=dark] {
+    background-color: #10121a;
+    color: #b1bcd7b0;
+    --mainBgColor: #061619;
+    --mainHeadingFontColor: #fffefb;
+    --textShadowColor: #990d0d;
+    --bodyFontColor: #202121;
+    --contBorderColor: #131d1d;
+    --contBgColor: rgb(4, 8, 8);
+    --tableBorderColor: #040403;
+    --tableBgColor: rgb(28, 21, 32);
+    --tableFontColor: rgb(221, 230, 230);
+    --inputBgColor: #000000;
+    --inputFontColor: #fef7f7;
+    --btnFontColor: #8f9393;
+    --btnBgColor: #010607;
+    --autoCompBgColor: rgb(0, 0, 0);
+    --autoCompBorderC: #fffbfb;
+    --autoCompBgColorH: #e9e9e9;
+    --autoCompBgColorA: rgb(253, 255, 255);
+    --autoCompFontColor: rgb(254, 252, 252);
+    --checkedBgColor: #1c0d1c;
+    --tableFontColor: rgb(64, 245, 245);
+}
+
+body[light-mode="dark"] .light-mode-button span:nth-child(1) {
+    background-color: #ced4e2;
+    color: #141516;
+}
+
+body[light-mode=dark] .light-mode-button span:nth-child(2) {
+    left: 30px;
+    background-color: #141516;
+}
+
+/* Light Mode Button Styles
+--------------------------- */
+.light-mode-button {
+    background: 0;
+    border: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    height: 40px;
+    width: 10px;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0);
+}
+
+.light-mode-button:focus {
+    outline: none;
+    /* Not ideal for accessibility */
+}
+
+.light-mode-button span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: #d6d7db;
+    box-shadow: inset 1px 1px 3px 0 rgb(0 0 0 / 40%);
+    transition: .3s;
+}
+
+.light-mode-button span:nth-child(2) {
+    position: absolute;
+    top: 2px;
+    left: 5px;
+    width: 17px;
+    height: 17px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 1px 1px 2px 0 rgb(0 0 0 / 40%);
+    transition: .3s;
+
+
+
+}

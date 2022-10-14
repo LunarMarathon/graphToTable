@@ -14,7 +14,20 @@
     <script src="https://kit.fontawesome.com/afd4daee31.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1>Graph to Table</h1>
+    <!-- <script>
+        
+    </script> -->
+    <div class="nav">
+        <div></div>
+        <h1>Graph to Table</h1>
+        <div class="container">
+
+            <button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
     <div class="outerInputDiv">
         <div class="inputCont autocomplete">
             <input id="input1" type="text" placeholder="key/node1">
@@ -30,12 +43,15 @@
         <button type="submit" class="readBtn btn" onclick="searchTable()">Search table!</button>
         <button id="downloadBtn" class="readBtn btn" onclick="downloadFunc()">Download CSV!</button>
     </div>
-    
+
     <div id="container"></div>
     <a href="#" class="goTo-top-btn">
         <i class="fas fa-chevron-up"></i>
-      </a>
-    
+    </a>
+
     <script src="index.js"></script>
+    <!-- <script>
+        
+    </script> -->
 </body>
 </html>
