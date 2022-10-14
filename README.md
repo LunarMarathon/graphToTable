@@ -15,7 +15,7 @@ You must have seen graphs or networks(or even mindmaps), connecting words or sen
 ![image](https://user-images.githubusercontent.com/113847439/195137940-fce3b9e0-1356-49c0-afce-68a83fb0475d.png)
 ### Table -
 ![image](https://user-images.githubusercontent.com/113847439/195137958-bf24bae1-0662-437d-a0ce-0172a7055632.png)
-![image](https://user-images.githubusercontent.com/113847439/195137968-b4f37f2b-b30d-43b9-b4b3-9bcf526afd3e.png)
+![image](https://user-images.githubusercontent.com/113847439/195905936-de865ff2-e247-4222-8ccd-48fc44e25ff3.png)
 	
 ## Website
 [📌Visit the site](https://lunarmarathon.github.io/graphToTable/)
