@@ -135,6 +135,20 @@ function autocomplete(inp, arr) {
 
 //Code for creating the table
 function createTable() {
+/* Changes done by Siddhesh172004 */
+
+// Alert messgae code starts
+var showalert=document.getElementById('showalert')
+    if(input1.value.length==0 || input2.value.length==0){
+        showalert.classList.remove('hide')
+        showalert.classList.add('showalert')
+        
+        return 0;
+    }
+  
+// Alert messgae code ends
+/* Changes done by Siddhesh172004 */
+
     autocomplete(document.getElementById("input1"), tableArr);
     autocomplete(document.getElementById("input2"), tableArr);
     let key = document.getElementById("input1").value;
@@ -208,6 +222,20 @@ function createTable() {
     //----------------------------------------------------------------
 
 }
+
+
+
+// to close the alert badge starts
+
+function closethealert(){
+    var showalert=document.getElementById('showalert')
+    
+        showalert.classList.remove('showalert')
+           showalert.classList.add('hide')
+       }  
+// to close the alert badge ends
+
+
 //----------------------------------------------------------------
 
 //Search table code
@@ -394,3 +422,21 @@ function generateTable() {
     });
     //----------------------------------------------------------------
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
