@@ -1,30 +1,3 @@
-// dark
-
-window.addEventListener("storage", function () {
-    if (localStorage.lightMode == "dark") {
-        app.setAttribute("light-mode", "dark");
-    } else {
-        app.setAttribute("light-mode", "light");
-    }
-}, false);
-var app = document.getElementsByTagName("BODY")[0];
-if (localStorage.lightMode == "dark") {
-    app.setAttribute("light-mode", "dark");
-}
-
-
-function toggle_light_mode() {
-    var app = document.getElementsByTagName("BODY")[0];
-    if (localStorage.lightMode == "dark") {
-        localStorage.lightMode = "light";
-        app.setAttribute("light-mode", "light");
-    } else {
-        localStorage.lightMode = "dark";
-        app.setAttribute("light-mode", "dark");
-    }
-}
-// ********
-
 let tableArr = [
     ["Fruits", "Mango", "Apple", "Banana"],
     ["Mango", "Fruits"],
@@ -201,7 +174,7 @@ function createTable() {
         for (let cell of row) {//While iterating over the index(cell)
             //insert a cell into the table element
             let newCell = table.rows[table.rows.length - 1].insertCell();//add text to the created cell element
-            newCell.innerHTML = `<div class="cell"><input class="cell-checkbox" type="checkbox"><label><a href="#" class="linkrow">${cell}</a></label></div>`;
+            newCell.innerHTML = `<div class="cell"><input type="checkbox"><label><a href="#" class="linkrow">${cell}</a></label></div>`;
         }
     }
     //append the compiled table to the DOM
@@ -232,6 +205,8 @@ function createTable() {
             $(window).scrollTop(y)
         }
     });
+    //----------------------------------------------------------------
+
 }
 //----------------------------------------------------------------
 
@@ -273,13 +248,12 @@ function searchTable() {
     }
     //append the compiled table to the DOM
     // document.body.appendChild(table);
-
 }
 //----------------------------------------------------------------
 
 //Download CSV code
 function htmlToCSV(html, filename) {
-//     alert("Inside htmlToCSV")
+    //alert("Inside htmlToCSV")
     var data = [];
     var rows = document.querySelectorAll("table tr");
 
@@ -313,7 +287,7 @@ function downloadFunc() {
 }
 //----------------------------------------------------------------
 
-//Top button code
+//Top button code c
 const toTop = document.querySelector(".goTo-top-btn");
 
 window.addEventListener("scroll", () => {
@@ -325,18 +299,27 @@ window.addEventListener("scroll", () => {
 })
 //----------------------------------------------------------------
 
-//🔳adding multiple links separated by commas
-//🔳checkbox/diff format and saving it if review is done
-//🔳file or db or browser's local storage
-//🔳import in csv format
-//🔳display rows with partial matches too
-//🔳updating and deleting rows or cells
-//🔳css alignment stuff 2
-//🔳new color palette?
-//✅unnecessary lines removal
-//✅css colors -> root colors
-//✅css alignment stuff 1
-//✅create new rows for links as well + if exists condition
-//✅auto complete for both keys and links
-//✅searching rows + display (js or switch to db queries?)
-//✅export - csv format
+//Dark mode c
+window.addEventListener("storage", function () {
+    if (localStorage.lightMode == "dark") {
+        app.setAttribute("light-mode", "dark");
+    } else {
+        app.setAttribute("light-mode", "light");
+    }
+}, false);
+var app = document.getElementsByTagName("BODY")[0];
+if (localStorage.lightMode == "dark") {
+    app.setAttribute("light-mode", "dark");
+}
+
+function toggle_light_mode() {
+    var app = document.getElementsByTagName("BODY")[0];
+    if (localStorage.lightMode == "dark") {
+        localStorage.lightMode = "light";
+        app.setAttribute("light-mode", "light");
+    } else {
+        localStorage.lightMode = "dark";
+        app.setAttribute("light-mode", "dark");
+    }
+}
+//----------------------------------------------------------------
