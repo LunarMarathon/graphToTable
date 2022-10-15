@@ -323,3 +323,52 @@ function toggle_light_mode() {
     }
 }
 //----------------------------------------------------------------
+
+//sorting the table by minimum number of nodes 
+function sortTableMin() {
+   
+    tableArr.sort(function(a, b){
+        if(a.length == b.length) {
+            return 0;
+        }
+        return (a.length < b.length)? -1:1;
+    });
+
+    generateTable();
+}
+//----------------------------------------------------------------
+
+//sorting the table by maximum number of nodes
+function sortTableMax() {
+
+    tableArr.sort(function(a, b){
+        if(a.length == b.length) {
+            return 0;
+        }
+        return (a.length > b.length)? -1:1;
+    });
+
+    generateTable();
+}
+//----------------------------------------------------------------
+
+function generateTable() {
+    let table = document.createElement('table');//iterate over every array(row) within tableArr
+    for (let row of tableArr) {//Insert a new row element into the table element
+        let newRow = table.insertRow();//Iterate over every index(cell) in each array(row)
+        newRow.id = row[0]
+        // console.log(newRow.id)
+        for (let cell of row) {//While iterating over the index(cell)
+            //insert a cell into the table element
+            let newCell = table.rows[table.rows.length - 1].insertCell();//add text to the created cell element
+            newCell.innerHTML = `<div class="cell"><input type="checkbox"><label><a href="#" class="linkrow">${cell}</a></label></div>`;
+        }
+    }
+    //append the compiled table to the DOM
+    let divContainer = document.getElementById("container");
+    divContainer.appendChild(table);
+    // document.body.appendChild(table);
+
+    //Add styling to container
+    divContainer.classList.add("dynCont");
+}
