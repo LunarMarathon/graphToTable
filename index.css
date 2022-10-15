@@ -304,6 +304,10 @@ input:checked+label {
     justify-content: space-around;
 }
 
+.toggleContainer {
+    width: 40px;
+}
+
 body {
     background-color: var(--mainBgColor);
     transition: background-color .3s;
@@ -337,7 +341,7 @@ body[light-mode="dark"] .light-mode-button span:nth-child(1) {
 }
 
 body[light-mode=dark] .light-mode-button span:nth-child(2) {
-    left: 30px;
+    left: 20px;
     background-color: #141516;
 }
 
@@ -363,7 +367,7 @@ body[light-mode=dark] .light-mode-button span:nth-child(2) {
     position: absolute;
     top: 0;
     left: 0;
-    width: 50px;
+    width: 40px;
     height: 20px;
     border-radius: 20px;
     background-color: #d6d7db;
