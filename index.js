@@ -371,4 +371,26 @@ function generateTable() {
 
     //Add styling to container
     divContainer.classList.add("dynCont");
+
+    // Code to scroll down to particular row - Sort-scroll fix>>>>>>>
+    link = $('.linkrow');
+    // console.log(link)
+    link.click(function (e) {
+        e.preventDefault();
+        // console.log('clicked');
+        var rowVal = $(this)[0].innerHTML,
+            row;
+        // console.log(rowVal)
+
+        row = $('#' + rowVal);
+        // console.log(row)
+        if (row.length) {
+            // console.log(row.offset().top);
+            // console.log(document.documentElement.scrollHeight / 2);
+            let y = (row.offset().top)
+            // console.log(y)
+            $(window).scrollTop(y)
+        }
+    });
+    //----------------------------------------------------------------
 }
