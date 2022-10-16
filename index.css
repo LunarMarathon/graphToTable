@@ -334,17 +334,6 @@ body[light-mode=dark] {
     --autoCompFontColor: #e1e1e1;
     --checkedBgColor: #404A47;
 }
-/* Changes done by Siddhesh172004 */
-
-body[light-mode=dark] .alert{
-    padding: 10px;
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
-    width: 50%;
-   margin: auto;
-}
-
-/* Changes done by Siddhesh172004 */
 
 body[light-mode="dark"] .light-mode-button span:nth-child(1) {
     background-color: #ced4e2;
@@ -400,35 +389,46 @@ body[light-mode=dark] .light-mode-button span:nth-child(2) {
 
 /* --------------------------------------------------- */
 
-/* Changes done by Siddhesh172004 */
+/* Alert code */
+/* --------------------------------------------------- */
+body[light-mode=dark] .alert {
+    padding: 10px;
+    background-color: #358e9a;
+    color: #202121;
+    width: 50%;
+    margin: auto;
+}
 
-/* Alert code starts  */
 .alert {
     padding: 10px;
     background-color: #78c992;
-    color: rgb(0, 0, 0);
+    color: #202121;
     width: 50%;
-   margin: auto;
-  }
-.hide{
+    margin: auto;
+    border-radius: 3px;
+}
+
+.hide {
     display: none;
 }
-.showalert{
+
+.showalert {
     display: block;
-}  
-  .closebtn {
+}
+
+.closebtn {
     margin-left: 15px;
-    color: rgb(0, 0, 0);
+    color: #202121;
     font-weight: bold;
     float: right;
     font-size: 22px;
     line-height: 20px;
     cursor: pointer;
     transition: 0.3s;
-  }
-  
-  .closebtn:hover {
-    color: black;
-  }
-/* Alert code ends  */
-/* Changes done by Siddhesh172004 */
+}
+
+.closebtn:hover {
+    color: #202121;
+}
+
+/* --------------------------------------------------- */
