@@ -44,7 +44,7 @@ h1 {
 
 #container {
     /* white-space: pre-wrap; */
-    margin: 30px;
+    margin: auto;
     /* border: 2px solid var(--contBorderColor); */
     background-color: var(--contBgColor);
     text-align: center;
