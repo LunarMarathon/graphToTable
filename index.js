@@ -239,7 +239,6 @@ function searchTable() {
  if (input1.value.length == 0) {
      showalert.classList.remove('hide')
      showalert.classList.add('showalert')
-     
      return 0;
  }
  // Alert messgae code ends
