@@ -233,6 +233,41 @@ function downloadFunc() {
     var html = document.querySelector("table").outerHTML;
     htmlToCSV(html, "graphTo2D.csv");
 }
+        
+function Upload() {
+    let tables = [];
+            var fileUpload = document.getElementById("fileUpload");
+            var regex = /^([a-zA-Z0-9\s_\\.\-:0-9()])+(.csv|.txt)$/;
+            if (regex.test(fileUpload.value.toLowerCase())) {
+                if (typeof (FileReader) != "undefined") {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        var tables = document.createElement("table");
+                        var rows = e.target.result.split("\n");
+                        for (var i = 0; i < rows.length; i++) {
+                            var cells = rows[i].split(",");
+                            if (cells.length > 1) {
+                                var row = tables.insertRow(-1);
+                                for (var j = 0; j < cells.length; j++) {
+                                    var cell = row.insertCell(-1);
+                                    cell.innerHTML = cells[j];
+                                }
+                            }
+                        }
+                        var CSV = document.getElementById("container");
+                        CSV.innerHTML = "";
+                        CSV.appendChild(tables);
+                    }
+                    reader.readAsText(fileUpload.files[0]);
+                } else {
+                    alert("This browser does not support HTML5.");
+                }
+            } else {
+                alert("Please upload a valid CSV file.");
+            }
+        }
+
+
 
 //🔳adding multiple links separated by commas
 //🔳checkbox/diff format and saving it if review is done
