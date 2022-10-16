@@ -263,6 +263,17 @@ function closethealert() {
 
 //Search table code
 function searchTable() {
+
+ // Alert message code starts
+ var showalert = document.getElementById('showalert')
+ if (input1.value.length == 0) {
+     showalert.classList.remove('hide')
+     showalert.classList.add('showalert')
+     return 0;
+ }
+ // Alert messgae code ends
+
+
     autocomplete(document.getElementById("input1"), tableArr);
     let key = document.getElementById("input1").value;
     // alert("within search")
