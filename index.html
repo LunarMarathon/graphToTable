@@ -19,8 +19,11 @@
         <button type="submit" class="readBtn btn" onclick="createTable()">Generate table!</button>
         <button type="submit" class="readBtn btn" onclick="searchTable()">Search table!</button>
         <button id="downloadBtn" class="readBtn btn" onclick="downloadFunc()">Download CSV!</button>
-        <input type="file" class = "readBtn btn" id="fileUpload" />
-        <input type="button" class= "readBtn btn" id="upload" value="Import" onclick="Upload()" />
+        <input type="file" class = "readBtn btn file" id="fileUpload"/>
+        <button type="button" class="fileadd readBtn btn">Choose File</button>
+        <span class="label"></span>
+        <input type="button" class= "readBtn btn" id="upload" value="Import" onclick="Upload()"/>
+
     </div>
     
     <div id="container"></div>

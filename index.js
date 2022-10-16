@@ -268,7 +268,24 @@ function Upload() {
         }
 
 
-
+Array.prototype.forEach.call(document.querySelectorAll('.fileadd'), function (button) {
+    const hiddenInput = button.parentElement.querySelector('.file');
+    const label = button.parentElement.querySelector('.label');
+        button.addEventListener('click', function () {
+            hiddenInput.click();
+        });
+        
+        hiddenInput.addEventListener('change', function() {
+            const filenamelist = Array.prototype.map.call(hiddenInput.files, function (file) {
+            return file.name;
+            });
+        
+        label.textContent = filenamelist.join(' ') || defaulLabelText;
+        label.title = label.textContent;
+        });
+        
+        });
+           
 //🔳adding multiple links separated by commas
 //🔳checkbox/diff format and saving it if review is done
 //🔳file or db or browser's local storage
