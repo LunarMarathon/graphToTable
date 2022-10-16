@@ -118,7 +118,7 @@ th,
 td {
     border: 2px solid var(--tableBorderColor);
     padding: 7px;
-    margin: 20px;
+    margin: 20px auto;
     /* display: block; */
     /* width: 100%; */
     overflow: auto;
