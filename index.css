@@ -44,7 +44,7 @@ h1 {
 
 #container {
     /* white-space: pre-wrap; */
-    margin: auto;
+    margin: 30px;
     /* border: 2px solid var(--contBorderColor); */
     background-color: var(--contBgColor);
     text-align: center;
@@ -53,9 +53,6 @@ h1 {
     border-radius: 7px;
     white-space: nowrap;
     /* overflow-x: scroll; */
-    display: flex;
-    justify-content: center;
-    flex-wrap:wrap;
 }
 
 .dynCont{
@@ -69,7 +66,7 @@ th,
 td {
     border: 1px solid var(--tableBorderColor);
     padding: 7px;
-    margin: 20px;
+    margin: 20px auto;
     /* display: block; */
     /* width: 100%; */
     overflow: auto;
