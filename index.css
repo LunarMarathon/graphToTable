@@ -432,3 +432,15 @@ body[light-mode=dark] .alert {
 }
 
 /* --------------------------------------------------- */
+/* Edit btn */
+/* --------------------------------------------------- */
+.editCell {
+    font-size: 15px;
+    background-color: transparent;
+    border: none;
+    margin: 5px;
+    cursor: pointer;
+    color: #358e9a;
+}
+
+/* --------------------------------------------------- */

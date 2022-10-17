@@ -217,7 +217,7 @@ function createTable() {
             //While iterating over the index(cell)
             //insert a cell into the table element
             let newCell = table.rows[table.rows.length - 1].insertCell(); //add text to the created cell element
-            newCell.innerHTML = `<div class="cell"><input type="checkbox"><label><a href="#" class="linkrow">${cell}</a></label></div>`;
+            newCell.innerHTML = `<div class="cell"><input type="checkbox"><label><a href="#" id="cell${cell}" class="linkrow">${cell}</a></label><button id="b${cell}" class="editCell"><i class="fa fa-pencil" aria-hidden="true"></i></button></div>`;
         }
     }
     //append the compiled table to the DOM
@@ -248,8 +248,34 @@ function createTable() {
             $(window).scrollTop(y);
         }
     });
+
+    editBtn = $(".editCell");
+    // console.log(link)
+    editBtn.click(function (e) {
+        e.preventDefault();
+        console.log('clicked edit');
+        var cellIdb = $(this)[0].id;
+        console.log(cellIdb)
+        var newValue = prompt("Enter correct text", "-");
+        alert("Clear the screen and click generate table to see the changes")
+        console.log(newValue)
+        var editIdVal = cellIdb.substring(1)
+        console.log(editIdVal)
+        // $("#" + editId).innerHTML=newValue
+        var editId = $("#cell" + editIdVal)[0]
+        console.log(editId)
+        editId.innerHTML = newValue
+        // const arrayo = tableArr.map(el => el[0] === editIdVal ? newValue : el);
+        tableArr = tableArr.map(row =>
+            row.map(element =>
+                element === editIdVal ? newValue : element
+            )
+        )
+        // console.log(arrayoo);
+    });
     //----------------------------------------------------------------
 }
+
 //----------------------------------------------------------------
 // to close the alert badge starts
 function closethealert() {
