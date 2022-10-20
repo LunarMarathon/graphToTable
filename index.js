@@ -348,7 +348,7 @@ function downloadFunc() {
     var html = document.querySelector("table").outerHTML;
     htmlToCSV(html, "graphToTable.csv");
 }
-=======
+
 //----------------------------------------------------------------
 
 //Top button code c
