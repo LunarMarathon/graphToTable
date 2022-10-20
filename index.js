@@ -514,19 +514,3 @@ Array.prototype.forEach.call(document.querySelectorAll('.fileadd'), function (bu
         });
         
         });
-           
-//🔳adding multiple links separated by commas
-//🔳checkbox/diff format and saving it if review is done
-//🔳file or db or browser's local storage
-//🔳import in csv format
-//🔳display rows with partial matches too
-//🔳updating and deleting rows or cells
-//🔳css alignment stuff 2
-//🔳new color palette?
-//✅unnecessary lines removal
-//✅css colors -> root colors
-//✅css alignment stuff 1
-//✅create new rows for links as well + if exists condition
-//✅auto complete for both keys and links
-//✅searching rows + display (js or switch to db queries?)
-//✅export - csv format
