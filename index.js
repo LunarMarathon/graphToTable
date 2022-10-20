@@ -213,11 +213,19 @@ function createTable() {
         let newRow = table.insertRow(); //Iterate over every index(cell) in each array(row)
         newRow.id = row[0];
         // console.log(newRow.id)
-        for (let cell of row) {
+        // Earlier > for (let cell of row)
+        for (let [i, cell] of row.entries()) {
             //While iterating over the index(cell)
             //insert a cell into the table element
-            let newCell = table.rows[table.rows.length - 1].insertCell(); //add text to the created cell element
-            newCell.innerHTML = `<div class="cell"><input type="checkbox"><label><a href="#" id="cell${cell}" class="linkrow">${cell}</a></label><button id="b${cell}" class="editCell"><i class="fa fa-pencil" aria-hidden="true"></i></button></div>`;
+            //i is the index
+            if (i == 0) {
+                let newCell = table.rows[table.rows.length - 1].insertCell(); //add text to the created cell element
+                newCell.innerHTML = `<div class="cell"><button id="d${cell}" class="delCell"><i class="fa-solid fa-delete-left"></i></button><input type="checkbox"><label><a href="#" id="cell${cell}" class="linkrow">${cell}</a></label><button id="b${cell}" class="editCell"><i class="fa fa-pencil" aria-hidden="true"></i></button></div>`;
+            }
+            else {
+                let newCell = table.rows[table.rows.length - 1].insertCell(); //add text to the created cell element
+                newCell.innerHTML = `<div class="cell"><input type="checkbox"><label><a href="#" id="cell${cell}" class="linkrow">${cell}</a></label><button id="b${cell}" class="editCell"><i class="fa fa-pencil" aria-hidden="true"></i></button></div>`;
+            }
         }
     }
     //append the compiled table to the DOM
@@ -227,7 +235,7 @@ function createTable() {
 
     //Add styling to container
     divContainer.classList.add("dynCont");
-
+    //----------------------------------------------------------------
     // Code to scroll down to particular row>>>>>>>>>>>>>>>>>>>>>>>
     link = $(".linkrow");
     // console.log(link)
@@ -248,7 +256,9 @@ function createTable() {
             $(window).scrollTop(y);
         }
     });
-
+    //----------------------------------------------------------------
+    // Edit btn code starts
+    //----------------------------------------------------------------
     editBtn = $(".editCell");
     // console.log(link)
     editBtn.click(function (e) {
@@ -273,9 +283,47 @@ function createTable() {
         )
         // console.log(arrayoo);
     });
+    // edit btn code ends
+    //----------------------------------------------------------------
+    //----------------------------------------------------------------
+    // del btn code starts
+    delBtn = $(".delCell");
+    // console.log(link)
+    delBtn.click(function (e) {
+        e.preventDefault();
+        console.log('clicked del btn');
+        var cellIdd = $(this)[0].id;
+        console.log(cellIdd)
+        var delIdVal = cellIdd.substring(1)
+        console.log(delIdVal)
+        alert("The row will be deleted!")
+        rowV = rowIndex(tableArr, delIdVal)
+        console.log(rowV)
+        tableArr.splice(rowV, 1);
+
+        // Row index doesn't change after deleting the row, so the following won't work - T2
+        // row = $("#" + delIdVal);
+        // console.log(row.index())
+        // tableArr.splice(row.index(), 1);
+        // console.log(tableArr)
+
+        //Won't work
+        // console.log($(this).parentNode)
+
+        // This doesn't work + would have same issue as above - T1
+        // tableArr = tableArr.map(row => row.id === delIdVal ? tableArr.deleteRow($(row.id).index()) : row)
+    });
+    // del btn code ends
     //----------------------------------------------------------------
 }
-
+// Del fnc - finding row index to delete
+function rowIndex(array, keyVal) {
+    for (var i = 0; i < array.length; i++) {
+        if (array[i][0] == keyVal) {
+            return i;   // Found it
+        }
+    }
+}
 //----------------------------------------------------------------
 // to close the alert badge starts
 function closethealert() {

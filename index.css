@@ -432,15 +432,20 @@ body[light-mode=dark] .alert {
 }
 
 /* --------------------------------------------------- */
-/* Edit btn */
+/* Edit, del btn */
 /* --------------------------------------------------- */
-.editCell {
+.editCell,
+.delCell {
     font-size: 15px;
     background-color: transparent;
     border: none;
     margin: 5px;
     cursor: pointer;
     color: #358e9a;
+}
+
+.delCell {
+    transform: rotateZ(180deg);
 }
 
 /* --------------------------------------------------- */
