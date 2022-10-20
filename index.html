@@ -66,6 +66,11 @@
         <button type="submit" class="readBtn btn" onclick="createTable()">Generate table!</button>
         <button type="submit" class="readBtn btn" onclick="searchTable()">Search table!</button>
         <button id="downloadBtn" class="readBtn btn" onclick="downloadFunc()">Download CSV!</button>
+
+        <input type="file" class = "readBtn btn file" id="fileUpload"/>
+        <button type="button" class="fileadd readBtn btn">Choose File</button>
+        <span class="label"></span>
+        <input type="button" class= "readBtn btn" id="upload" value="Import" onclick="Upload()"/>
         <button type="submit" class="readBtn btn" onclick="sortTableMin()">Sort by min nodes!</button>
         <button type="submit" class="readBtn btn" onclick="sortTableMax()">Sort by max nodes!</button>
     </div>
@@ -77,6 +82,10 @@
     </a>
 
     <script src="index.js"></script>
+   
+    <div id="dvCSV">
+    </div>
+
 </body>
 
 </html>

@@ -118,7 +118,7 @@ th,
 td {
     border: 2px solid var(--tableBorderColor);
     padding: 7px;
-    margin: 20px;
+    margin: 20px auto;
     /* display: block; */
     /* width: 100%; */
     overflow: auto;
@@ -261,6 +261,16 @@ input:checked+label {
     background-color: var(--checkedBgColor);
 }
 
+
+.file {
+    width: 20rem;
+    display: none;
+}
+
+.fileadd {
+    cursor: pointer;
+}
+
 /* Scroll-to-top button */
 /* --------------------------------------------------- */
 .goTo-top-btn {
@@ -392,6 +402,7 @@ body[light-mode=dark] .light-mode-button span:nth-child(2) {
 /* Alert code */
 /* --------------------------------------------------- */
 body[light-mode=dark] .alert {
+
     padding: 10px;
     background-color: #358e9a;
     color: #202121;
@@ -449,3 +460,4 @@ body[light-mode=dark] .alert {
 }
 
 /* --------------------------------------------------- */
+

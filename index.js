@@ -337,6 +337,17 @@ function closethealert() {
 
 //Search table code
 function searchTable() {
+
+ // Alert message code starts
+ var showalert = document.getElementById('showalert')
+ if (input1.value.length == 0) {
+     showalert.classList.remove('hide')
+     showalert.classList.add('showalert')
+     return 0;
+ }
+ // Alert messgae code ends
+
+
     autocomplete(document.getElementById("input1"), tableArr);
     let key = document.getElementById("input1").value;
     // alert("within search")
@@ -411,6 +422,7 @@ function downloadFunc() {
     var html = document.querySelector("table").outerHTML;
     htmlToCSV(html, "graphToTable.csv");
 }
+
 //----------------------------------------------------------------
 
 //Top button code c
@@ -524,3 +536,55 @@ function generateTable() {
     });
     //----------------------------------------------------------------
 }
+     
+function Upload() {
+    let tables = [];
+            var fileUpload = document.getElementById("fileUpload");
+            var regex = /^([a-zA-Z0-9\s_\\.\-:0-9()])+(.csv|.txt)$/;
+            if (regex.test(fileUpload.value.toLowerCase())) {
+                if (typeof (FileReader) != "undefined") {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        var tables = document.createElement("table");
+                        var rows = e.target.result.split("\n");
+                        for (var i = 0; i < rows.length; i++) {
+                            var cells = rows[i].split(",");
+                            if (cells.length > 1) {
+                                var row = tables.insertRow(-1);
+                                for (var j = 0; j < cells.length; j++) {
+                                    var cell = row.insertCell(-1);
+                                    cell.innerHTML = cells[j];
+                                }
+                            }
+                        }
+                        var CSV = document.getElementById("container");
+                        CSV.innerHTML = "";
+                        CSV.appendChild(tables);
+                    }
+                    reader.readAsText(fileUpload.files[0]);
+                } else {
+                    alert("This browser does not support HTML5.");
+                }
+            } else {
+                alert("Please upload a valid CSV file.");
+            }
+        }
+
+
+Array.prototype.forEach.call(document.querySelectorAll('.fileadd'), function (button) {
+    const hiddenInput = button.parentElement.querySelector('.file');
+    const label = button.parentElement.querySelector('.label');
+        button.addEventListener('click', function () {
+            hiddenInput.click();
+        });
+        
+        hiddenInput.addEventListener('change', function() {
+            const filenamelist = Array.prototype.map.call(hiddenInput.files, function (file) {
+            return file.name;
+            });
+        
+        label.textContent = filenamelist.join(' ') || defaulLabelText;
+        label.title = label.textContent;
+        });
+        
+        });
