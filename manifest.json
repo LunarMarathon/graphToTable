@@ -1,0 +1,11 @@
+{
+    "name": "GraphToTable",
+    "version": "1.0.0",
+    "description": "Converts Graph to table",
+    "manifest_version": 3,
+    "author": "Vedant Pol",
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "Graph_To_Table"
+    }
+}
